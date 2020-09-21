@@ -16,6 +16,13 @@ import java.util.ArrayList;
 public class GridHeroAdapter extends RecyclerView.Adapter<GridHeroAdapter.GridViewHolder> {
     private ArrayList<Hero> listHero;
 
+    private OnItemClickCallback onItemClickCallback;
+
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
 
     public GridHeroAdapter(ArrayList<Hero> list) {
         this.listHero = list;
@@ -35,7 +42,12 @@ public class GridHeroAdapter extends RecyclerView.Adapter<GridHeroAdapter.GridVi
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
 
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallback.onItemClicked(listHero.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -51,4 +63,9 @@ public class GridHeroAdapter extends RecyclerView.Adapter<GridHeroAdapter.GridVi
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
         }
     }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(Hero data);
+    }
+
 }
