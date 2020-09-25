@@ -1,8 +1,8 @@
 # ***Update***
-[x] Mode CardView
-[x] Penambahan ItemOnClickListener
-[x] Tampilan judul halaman yang berubah sesuai dengan mode yang dipilih
-[x] Menggunakan Toast
+- [X] Mode CardView
+- [X] Penambahan ItemOnClickListener
+- [X] Tampilan judul halaman yang berubah sesuai dengan mode yang dipilih
+- [X] Menggunakan Toast
 
 # ***Apa itu Toast?***
 > Toast adalah salah satu Widget yang digunakan untuk menmpilkan pesan berupa Text, yang terlintas setelah pengguna melakukan aksi tertentu.
@@ -15,3 +15,4 @@
 
 
 ## Tampilan Mode CardView
+![Screenshot_2020-09-25-19-19-02-02_4dcafebe7a9eb1b1b8009f5e6502c9f4](https://user-images.githubusercontent.com/60590053/94285772-4feb3c00-ff7e-11ea-8439-fe363a243d6b.png)
